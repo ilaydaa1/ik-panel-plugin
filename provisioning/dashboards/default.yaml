@@ -1,0 +1,7 @@
+apiVersion: 1
+
+providers:
+  - name: 'ilayda-panel-plugin'
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards
