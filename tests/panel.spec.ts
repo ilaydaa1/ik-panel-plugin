@@ -28,8 +28,8 @@ test('should display series counter when "Show series counter" option is enabled
   const dashboard = await readProvisionedDashboard({ fileName: 'dashboard.json' });
   const panelEditPage = await gotoPanelEditPage({ dashboard, id: '1' });
   const options = panelEditPage.getCustomOptions('Ilayda-Panel-Plugin');
-  const showSeriesCounter = options.getSwitch('Show series counter');
+  const showSeriesCounterer = options.getSwitch('Show series counter');
 
-  await showSeriesCounter.check();
+  await showSeriesCounterer.check();
   await expect(page.getByTestId('simple-panel-series-counter')).toBeVisible();
 });

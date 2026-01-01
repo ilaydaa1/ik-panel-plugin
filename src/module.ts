@@ -1,40 +1,30 @@
 import { PanelPlugin } from '@grafana/data';
-import { SimpleOptions } from './types';
-import { SimplePanel } from './components/SimplePanel';
+import { SimpleOptions, defaults } from './types';
+import SimplePanel from './components/SimplePanel';
 
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions((builder) => {
   return builder
     .addTextInput({
-      path: 'text',
+      path: 'simpleText',
       name: 'Simple text option',
       description: 'Description of panel option',
-      defaultValue: 'Default value of text input option',
+      defaultValue: defaults.simpleText,
     })
     .addBooleanSwitch({
-      path: 'showSeriesCount',
+      path: 'showSeriesCounter',
       name: 'Show series counter',
-      defaultValue: false,
+      defaultValue: defaults.showSeriesCounter,
     })
-    .addRadio({
-      path: 'seriesCountSize',
-      defaultValue: 'sm',
-      name: 'Series counter size',
-      settings: {
-        options: [
-          {
-            value: 'sm',
-            label: 'Small',
-          },
-          {
-            value: 'md',
-            label: 'Medium',
-          },
-          {
-            value: 'lg',
-            label: 'Large',
-          },
-        ],
-      },
-      showIf: (config) => config.showSeriesCount,
+    .addColorPicker({
+      path: 'highlightColor',
+      name: 'Highlight color',
+      description: 'Circle & accent color of the panel',
+      defaultValue: defaults.highlightColor,
+    })
+    .addBooleanSwitch({
+      path: 'compactMode',
+      name: 'Compact mode',
+      description: 'Use smaller fonts and hide some details',
+      defaultValue: defaults.compactMode,
     });
 });

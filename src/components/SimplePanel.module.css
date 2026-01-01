@@ -1,0 +1,180 @@
+.wrapper {
+  box-sizing: border-box;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.compact {
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(255, 193, 7, 0.12);
+  color: #ffc107;
+}
+
+.statusBadge[data-tone='low'] {
+  background: rgba(46, 204, 113, 0.13);
+  color: #2ecc71;
+}
+
+.statusBadge[data-tone='high'] {
+  background: rgba(231, 76, 60, 0.16);
+  color: #e74c3c;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.statusLabel {
+  line-height: 1;
+}
+
+.mainTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subTitle {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.circleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.04);
+}
+
+.circleCaption {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metricCard {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+}
+
+.metricValue {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.metricValueSmall {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.metricHint {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.detailsToggle {
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.75;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.detailsToggle:hover {
+  text-decoration: underline;
+  opacity: 0.95;
+}
+
+.detailsRow {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.detailLine {
+  line-height: 1.4;
+}
+
+.emphasis {
+  font-weight: 600;
+}
+
+.emptyState {
+  box-sizing: border-box;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.emptyText {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.footerText {
+  font-size: 12px;
+  opacity: 0.8;
+}

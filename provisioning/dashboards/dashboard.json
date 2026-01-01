@@ -36,7 +36,7 @@
       "id": 1,
       "options": {
         "seriesCountSize": "sm",
-        "showSeriesCount": false,
+        "showSeriesCounter": false,
         "text": "Default value of text input option"
       },
       "targets": [
@@ -67,7 +67,7 @@
       "id": 2,
       "options": {
         "seriesCountSize": "sm",
-        "showSeriesCount": false,
+        "showSeriesCounter": false,
         "text": "Default value of text input option"
       },
       "targets": [
