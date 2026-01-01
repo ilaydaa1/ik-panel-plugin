@@ -1,7 +1,15 @@
-type SeriesSize = 'sm' | 'md' | 'lg';
+// src/types.ts
 
 export interface SimpleOptions {
-  text: string;
-  showSeriesCount: boolean;
-  seriesCountSize: SeriesSize;
+  simpleText: string;
+  showSeriesCounter: boolean;
+  highlightColor: string;
+  compactMode: boolean;
 }
+
+export const defaults: SimpleOptions = {
+  simpleText: 'Default value of text input option',
+  showSeriesCounter: true,
+  highlightColor: '#3B82F6',
+  compactMode: false,
+};

@@ -1,0 +1,40 @@
+# Query: laydakarahan-ilaydapanelplugin-panel
+# ContextLines: 1
+
+9 results - 4 files
+
+.config/docker-compose-base.yaml:
+   3      user: root
+   4:     container_name: 'ik-panel-plugin'
+   5  
+
+  15      volumes:
+  16:       - ../dist:/var/lib/grafana/plugins/laydakarahan-ilaydapanelplugin-panel
+  17        - ../provisioning:/etc/grafana/provisioning
+  18:       - ..:/root/laydakarahan-ilaydapanelplugin-panel
+  19  
+
+  21        NODE_ENV: development
+  22:       GF_LOG_FILTERS: plugin.laydakarahan-ilaydapanelplugin-panel:debug
+  23        GF_LOG_LEVEL: debug
+  24        GF_DATAPROXY_LOGGING: 1
+  25:       GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: laydakarahan-ilaydapanelplugin-panel
+
+.github/workflows/ci.yml:
+  210          run: |
+  211:           docker logs laydakarahan-ilaydapanelplugin-panel >& grafana-server.log
+  212  
+
+provisioning/dashboards/dashboard.json:
+  53        "title": "Sample Panel Title",
+  54:       "type": "laydakarahan-ilaydapanelplugin-panel"
+  55      },
+
+  84        "title": "Sample Panel Title",
+  85:       "type": "laydakarahan-ilaydapanelplugin-panel"
+  86      }
+
+src/plugin.json:
+  4    "name": "Ilayda-Panel-Plugin",
+  5:   "id": "laydakarahan-ilaydapanelplugin-panel",
+  6    "info": {
