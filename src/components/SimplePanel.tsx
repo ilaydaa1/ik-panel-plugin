@@ -96,21 +96,25 @@ const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   const highlightColor = options.highlightColor || theme.colors.primary.main;
 
   if (!numericField || !stats) {
-    return (
-      <div className={styles.emptyState} style={{ height, width }}>
-        <div className={styles.emptyTitle}>
-          Developed by Ilayda Karahan – Fall 2025
-        </div>
-        <div className={styles.emptyText}>
-          No numeric data found. Please add a query to see the summary.
-        </div>
-        <div className={styles.footerText}>
-          Text option value:{' '}
-          {options.simpleText || 'Default value of text input option'}
-        </div>
+  return (
+    <div className={styles.emptyState} style={{ height, width }}>
+      <div className={styles.emptyTitle}>
+        CI/CD Pipeline Health – No data
       </div>
-    );
-  }
+      <div className={styles.emptyText}>
+        This panel shows a smart summary of DevOps pipeline health.
+        Add a numeric time-series query to see the analysis here.
+      </div>
+      <div className={styles.footerText}>
+        Text option value:{' '}
+        <span className={styles.emphasis}>
+          {options.simpleText || 'Default value of text input option'}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 
   const { avg, min, max, current } = stats;
 
