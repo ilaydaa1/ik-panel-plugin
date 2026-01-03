@@ -2,8 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
   "name": "Ilayda-Panel-Plugin",
-  "id": "ilaydakarahan.smart-summary-panel",
-
+ "id": "ilaydakarahan-smartsummary-panel",
   
   "info": {
     "keywords": ["panel"],
